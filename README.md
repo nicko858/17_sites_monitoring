@@ -60,7 +60,7 @@ source <path_to_virtualenv>/bin/activate
 ```
 - Run script with virtualenv-interpreter
 ```bash
-<path_to_virtualenv>/bin/python3.5 check_sites_health.py
+<path_to_virtualenv>/bin/python3.5 check_sites_health.py site_list.txt
 ```
 If everything is fine, you'll see such output:
 ```text
