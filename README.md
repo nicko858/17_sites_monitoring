@@ -11,7 +11,7 @@ The program is represented by the module check_sites_health.py. Module check_sit
 - ```get_args()```
 - ```get_domain_expiration_date()```
 - ```is_domain_name_payed()```
-- ```is_server_respond_with_200()```
+- ```is_server_respond_ok()```
 - ```load_urls4check()```
 - ```print_site_status()```
 
@@ -22,9 +22,7 @@ The program uses these libs from Python standart and third-party libraries:
 - ```argparse```
 - ```pytz```
 - ```path```
-- ```defaultdict from collections```
 - ```whois```
-- ``dateutil``
 
 
 **How in works:**
