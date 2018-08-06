@@ -57,10 +57,10 @@ def get_domain_expiration_date(url):
 
 def is_domain_name_payed(expiration_date, days):
     today = datetime.today()
-    nextmonth = today + timedelta(days=days)
+    until_date = today + timedelta(days=days)
     if isinstance(expiration_date, list):
-        return expiration_date[0] >= nextmonth
-    return expiration_date >= nextmonth
+        return expiration_date[0] >= until_date
+    return expiration_date >= until_date
 
 
 def print_site_status(url, is_server_ok, is_domain_payed):
@@ -89,4 +89,4 @@ if __name__ == "__main__":
                 domain_expiration_date,
                 days=31
             )
-            print_site_status(url, is_server_ok, is_domain_payed)
+        print_site_status(url, is_server_ok, is_domain_payed)
