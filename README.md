@@ -3,29 +3,8 @@ The program checks sites health. At the input - a text file with URLs for verifi
 - the server responds to the request with the status of HTTP 200;
 - the domain name of the site is paid for at least 1 month in advance.
 
-# Quickstart
+# How in works
 
-The program is represented by the module check_sites_health.py. Module check_sites_health.py contains the following functions:
-
-- ```check_file()```
-- ```get_args()```
-- ```get_domain_expiration_date()```
-- ```is_domain_name_payed()```
-- ```is_server_respond_ok()```
-- ```load_urls4check()```
-- ```print_site_status()```
-
-The program uses these libs from Python standart and third-party libraries:
-
-- ```datetime```
-- ```request```
-- ```argparse```
-- ```pytz```
-- ```path```
-- ```whois```
-
-
-**How in works:**
 
 - The program reads a text file with URLs  
 - Reads content line by line
@@ -40,6 +19,8 @@ http://baidu.com
 http://wikipedia.org
 http://reddit.com
 http://yahoo.com
+https://www.kinopoisk.ru/top/lists/
+https://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
 ```
 
 Python 3 should be already installed. Then use pip (or pip3 if there is a conflict with old Python 2 setup) to install dependencies:
@@ -62,6 +43,16 @@ source <path_to_virtualenv>/bin/activate
 ```
 If everything is fine, you'll see such output:
 ```text
+****************************************
+Site - https://www.kinopoisk.ru/top/lists/
+Server is ok - True
+Domain paid till next month - True
+****************************************
+****************************************
+Site - https://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
+Server is ok - True
+Domain paid till next month - False
+****************************************
 ****************************************
 Site - http://youtube.com
 Server is ok - True
